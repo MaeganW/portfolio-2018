@@ -35,12 +35,3 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh; }
-
-h1 {
-  color: var(--color-grey-dark-1); }
-
-.home_mobile {
-  color: var(--color-grey-dark-1); }
-
-.home_desktop {
-  color: var(--color-grey-light-2); }
