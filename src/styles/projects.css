@@ -1,5 +1,29 @@
 .projects {
   width: 100vw;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr); }
+  grid-template-columns: repeat(4, 1fr); }
+  .projects_container {
+    width: 100%;
+    height: 100%; }
+  .projects_img {
+    width: 100%;
+    height: 100%; }
+  .projects_mask {
+    width: inherit;
+    height: inherit;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-position: center !important;
+    position: relative; }
+    .projects_mask h3 {
+      color: #fff;
+      font-size: 2.0rem;
+      text-align: center; }
+    .projects_mask p {
+      color: #fff;
+      text-align: center; }
+    .projects_mask Button {
+      margin-right: auto;
+      margin-left: auto; }
+    .projects_mask_jsClock {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/JSClock.png"); }

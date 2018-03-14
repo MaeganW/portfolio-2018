@@ -1,5 +1,5 @@
-import React from 'react';
-import { Image } from 'semantic-ui-react';
+import React, { Component } from 'react';
+import { Image, Dimmer, Button, Header } from 'semantic-ui-react';
 
 import jsClock from '../../img/projects/JSClock.png';
 import cssVariables from '../../img/projects/CSSVariables.png';
@@ -23,84 +23,145 @@ import patatap from '../../img/projects/Patatap.png';
 const projectImgs = [
   {
     src: trillo,
-    href: 'http://google.com'
+    id: 'trillo',
+    href: 'http://google.com',
+    content: 'All-In-One responsive Travel Website built using Flexbox, SCSS, and custom css animations (Built by Maegan Womble - designed by Jonas Schmedtmann).'
   },
   {
     src: colorGame,
-    href: 'http://google.com'
+    id: 'colorGame',
+    href: 'http://google.com',
+    content: 'Here is some content.'
   },
   {
     src: gamma,
-    href: 'http://google.com'
+    id: 'gamma',
+    href: 'http://google.com',
+    content: "A responsive web design built for a fictional photo app utilizing the Bootstrap framework. Completed as an assignment for Eduonix's Projects in JavaScript and jQuery Online Course."
   },
   {
     src: metaVidz,
-    href: 'http://google.com'
+    id: 'metaVidz',
+    href: 'http://google.com',
+    content: "A working Youtube search engine with a simple and clean interface. Completed as an assignment for Eduonix's Projects in JavaScript and jQuery Online Course."
   },
   {
     src: jsClock,
-    href: 'http://google.com'
+    id: 'jsClock',
+    href: 'http://google.com',
+    content: 'Here is some content.'
   },
   {
     src: cssVariables,
-    href: 'http://google.com'
+    id: 'cssVariables',
+    href: 'http://google.com',
+    content: 'Here is some content.'
   },
   {
     src: drumKit,
-    href: 'http://google.com'
+    id: 'drumKit',
+    href: 'http://google.com',
+    content: 'Hello.'
   },
   {
     src: flexPanel,
-    href: 'http://google.com'
+    id: 'flexPanel',
+    href: 'http://google.com',
+    content: 'Here is some content.'
   },
   {
     src: paintApp,
-    href: 'http://google.com'
+    id: 'paintApp',
+    href: 'http://google.com',
+    content: 'Here is some content.'
   },
   {
     src: scroll,
-    href: 'http://google.com'
+    id: 'scroll',
+    href: 'http://google.com',
+    content: 'Here is some content.'
   },
   {
     src: shiftSelect,
-    href: 'http://google.com'
+    id: 'shiftSelect',
+    href: 'http://google.com',
+    content: 'Here is some content.'
   },
   {
     src: patatap,
-    href: 'http://google.com'
+    id: 'patatap',
+    href: 'http://google.com',
+    content: 'Here is some content.'
   },
   {
     src: typeAhead,
-    href: 'http://google.com'
+    id: 'typeAhead',
+    href: 'http://google.com',
+    content: 'Here is some content.'
   },
   {
     src: pomodoro,
-    href: 'http://google.com'
+    id: 'pomodoro',
+    href: 'http://google.com',
+    content: 'A clean design work-flow timer based off of the famous "Pomodoro Technique" with adjustable session and break lengths. Keeps track of number of completed sessions. Employs stop and pause throughout sessions with a simple click of the mouse.'
   },
   {
     src: okCrime,
-    href: 'http://google.com'
+    id: 'okCrime',
+    href: 'http://google.com',
+    content: 'Here is some content.'
   },
   {
     src: todo,
-    href: 'http://google.com'
+    id: 'todo',
+    href: 'http://google.com',
+    content: 'Here is some content.'
   }
 ];
 
-const imgBlocks = projectImgs.map((img) => (
-  <Image
-    src={img.src}
-    as='a'
-    href={img.href}
-    target='_blank'
-    fluid='true'
-  />
-));
 
-const Projects = () => (
-  <div className="projects">
-    {imgBlocks}
-  </div>
-);
+export default class Projects extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: ''
+    };
+  }
 
-export default Projects;
+  render() {
+    const imgBlocks = projectImgs.map((project) => (
+      <div className="projects_container">
+        {(this.state.active === project.id) ?
+        (
+          <div
+            className={`projects_mask projects_mask_${project.id}`}
+            onMouseLeave={() => this.setState({ active: '' })}
+            href={project.href}
+            target='_blank'
+            >
+            <h3>
+              {project.id}
+            </h3>
+            <p>
+              {project.content}
+            </p>
+            <Button primary>Link</Button>
+          </div>
+        )
+        : (
+          <img
+            onMouseEnter={() => this.setState({ active: project.id })}
+            className="projects_img"
+            src={project.src}
+          />
+        )}
+      </div>
+    ));
+
+    return (
+      <div className="projects">
+        {imgBlocks}
+      </div>
+    );
+  }
+}
