@@ -12,6 +12,9 @@
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   --line: 1px solid var(--color-grey-light-2);
+  --yellow: #FEF760;
+  --grey: #41464b;
+  --blue: #4DD9E5;
   --text-header: 'Montserrat', sans-serif;
   --text-normal: 'Montserrat', sans-serif;
   --text-button: 'Montserrat', sans-serif; }
