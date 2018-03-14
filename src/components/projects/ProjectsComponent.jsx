@@ -135,7 +135,6 @@ const projectImgs = [
   }
 ];
 
-
 export default class Projects extends Component {
   constructor(props) {
     super(props);
@@ -146,9 +145,9 @@ export default class Projects extends Component {
 
   render() {
     const imgBlocks = projectImgs.map((project) => (
-      <div className="projects_container">
-        {/* {(this.state.active === project.id) ?
-        ( */}
+      <div className="projects_block">
+        {(this.state.active === project.id) ?
+        (
           <div
             className={`projects_mask projects_mask_${project.id}`}
             onMouseLeave={() => this.setState({ active: '' })}
@@ -161,16 +160,16 @@ export default class Projects extends Component {
             <p>
               {project.content}
             </p>
-            <button className="projects_mask_button">Link</button>
+            <button className="projects_mask_button">See More</button>
           </div>
-        {/* ) */}
-        {/* : ( */}
-          {/* <img
+        )
+        : (
+          <img
             onMouseEnter={() => this.setState({ active: project.id })}
             className="projects_img"
             src={project.src}
-          /> */}
-        {/* )} */}
+          />
+        )}
       </div>
     ));
 
