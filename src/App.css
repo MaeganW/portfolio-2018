@@ -27,7 +27,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-grey-dark-2);
@@ -61,7 +61,11 @@ h1 {
     background-size: cover !important;
     background-repeat: no-repeat;
     background-position: center !important;
-    position: relative; }
+    position: relative;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
     .projects_mask h3 {
       color: #fff;
       font-size: 2.0rem;
@@ -69,8 +73,60 @@ h1 {
     .projects_mask p {
       color: #fff;
       text-align: center; }
-    .projects_mask Button {
+    .projects_mask_button {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin-left: auto;
       margin-right: auto;
-      margin-left: auto; }
+      background: #3498db;
+      background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+      background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+      background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+      background-image: -o-linear-gradient(top, #3498db, #2980b9);
+      background-image: linear-gradient(to bottom, #3498db, #2980b9);
+      border: none;
+      color: #ffffff;
+      font-size: 14px;
+      min-height: 27px;
+      padding: 5px 7px 5px 7px;
+      text-decoration: none;
+      outline: none; }
+      .projects_mask_button:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none; }
     .projects_mask_jsClock {
       background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/JSClock.png"); }
+    .projects_mask_typeAhead {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/Type Ahead.png"); }
+    .projects_mask_cssVariables {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/CSSVariables.png"); }
+    .projects_mask_drumKit {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/DrumKit.png"); }
+    .projects_mask_flexPanel {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/Flex Panel.png"); }
+    .projects_mask_paintApp {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/Paint App.png"); }
+    .projects_mask_scroll {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/Scroll.png"); }
+    .projects_mask_shiftSelect {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/Shift Select Checkboxes.png"); }
+    .projects_mask_colorGame {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/ColorGame.png"); }
+    .projects_mask_gamma {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/Gamma.png"); }
+    .projects_mask_metaVidz {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/MetaVidz.png"); }
+    .projects_mask_okCrime {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/OKCrime.png"); }
+    .projects_mask_pomodoro {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/Pomodoro.png"); }
+    .projects_mask_todo {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/Todo.png"); }
+    .projects_mask_trillo {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/Trillo.png"); }
+    .projects_mask_patatap {
+      background: linear-gradient(0deg, rgba(38, 38, 38, 0.9), rgba(38, 38, 38, 0.9)), url("./img/projects/Patatap.png"); }

@@ -23,99 +23,115 @@ import patatap from '../../img/projects/Patatap.png';
 const projectImgs = [
   {
     src: trillo,
+    title: 'Trillo',
     id: 'trillo',
     href: 'http://google.com',
     content: 'All-In-One responsive Travel Website built using Flexbox, SCSS, and custom css animations (Built by Maegan Womble - designed by Jonas Schmedtmann).'
   },
   {
     src: colorGame,
+    title: 'Color Game',
     id: 'colorGame',
     href: 'http://google.com',
-    content: 'Here is some content.'
+    content: "An RGB Color Game App utilizing animations and DOM manipulation for an interactive and colorful experience. Boasts two separate modes of difficulty that can be replayed endlesssly. Completed as an assignment for Colt Steele's The Complete Web Developer Bootcamp Online Course."
   },
   {
     src: gamma,
+    title: 'Gamma Photo App Site',
     id: 'gamma',
     href: 'http://google.com',
     content: "A responsive web design built for a fictional photo app utilizing the Bootstrap framework. Completed as an assignment for Eduonix's Projects in JavaScript and jQuery Online Course."
   },
   {
     src: metaVidz,
+    title: 'MetaVidz',
     id: 'metaVidz',
     href: 'http://google.com',
     content: "A working Youtube search engine with a simple and clean interface. Completed as an assignment for Eduonix's Projects in JavaScript and jQuery Online Course."
   },
   {
     src: jsClock,
+    title: 'JS Clock',
     id: 'jsClock',
     href: 'http://google.com',
     content: 'Here is some content.'
   },
   {
     src: cssVariables,
+    title: 'CSS Variables Manipulation',
     id: 'cssVariables',
     href: 'http://google.com',
     content: 'Here is some content.'
   },
   {
     src: drumKit,
+    title: 'Drum Kit',
     id: 'drumKit',
     href: 'http://google.com',
     content: 'Hello.'
   },
   {
     src: flexPanel,
+    title: 'Flex Panel Display',
     id: 'flexPanel',
     href: 'http://google.com',
     content: 'Here is some content.'
   },
   {
     src: paintApp,
+    title: 'Canvas Paint App',
     id: 'paintApp',
     href: 'http://google.com',
     content: 'Here is some content.'
   },
   {
     src: scroll,
+    title: 'Image Slide in on Scroll',
     id: 'scroll',
     href: 'http://google.com',
     content: 'Here is some content.'
   },
   {
     src: shiftSelect,
+    title: 'Select with Shift',
     id: 'shiftSelect',
     href: 'http://google.com',
     content: 'Here is some content.'
   },
   {
     src: patatap,
+    title: 'Patatap Clone',
     id: 'patatap',
     href: 'http://google.com',
-    content: 'Here is some content.'
+    content: "A light and fun patatap clone inspired by the original Patatap app. Functions, sounds, and animations are tied to keyboard keys to create a fun interactive experience. Completed as an assignment for Colt Steele's The Complete Web Developer Bootcamp Online Course."
   },
   {
     src: typeAhead,
+    title: 'Type Ahead Pokedex Search',
     id: 'typeAhead',
     href: 'http://google.com',
     content: 'Here is some content.'
   },
   {
     src: pomodoro,
+    title: 'Pomodoro Timer',
     id: 'pomodoro',
     href: 'http://google.com',
     content: 'A clean design work-flow timer based off of the famous "Pomodoro Technique" with adjustable session and break lengths. Keeps track of number of completed sessions. Employs stop and pause throughout sessions with a simple click of the mouse.'
   },
   {
     src: okCrime,
+    title: 'OK Crime',
     id: 'okCrime',
     href: 'http://google.com',
     content: 'Here is some content.'
   },
   {
     src: todo,
+    title: 'Todos App',
     id: 'todo',
     href: 'http://google.com',
-    content: 'Here is some content.'
+    content: "A productivity app for the everyday. Add and delete items at will or cross off already completed activities. Completed as an assignment for Colt Steele's The Complete Web Developer Bootcamp Online Course."
   }
 ];
 
@@ -131,8 +147,8 @@ export default class Projects extends Component {
   render() {
     const imgBlocks = projectImgs.map((project) => (
       <div className="projects_container">
-        {(this.state.active === project.id) ?
-        (
+        {/* {(this.state.active === project.id) ?
+        ( */}
           <div
             className={`projects_mask projects_mask_${project.id}`}
             onMouseLeave={() => this.setState({ active: '' })}
@@ -140,21 +156,21 @@ export default class Projects extends Component {
             target='_blank'
             >
             <h3>
-              {project.id}
+              {project.title}
             </h3>
             <p>
               {project.content}
             </p>
-            <Button primary>Link</Button>
+            <button className="projects_mask_button">Link</button>
           </div>
-        )
-        : (
-          <img
+        {/* ) */}
+        {/* : ( */}
+          {/* <img
             onMouseEnter={() => this.setState({ active: project.id })}
             className="projects_img"
             src={project.src}
-          />
-        )}
+          /> */}
+        {/* )} */}
       </div>
     ));
 
