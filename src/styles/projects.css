@@ -1,20 +1,23 @@
 .projects {
   width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-between; }
   .projects_block {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    margin: 5px; }
   .projects_visible {
-    width: 100%;
-    height: 100%; }
+    width: 20vw; }
   .projects_img {
     display: block;
     width: 100%;
     height: 100%; }
   .projects_mask {
-    width: 100%;
-    height: 100%;
+    width: 20vw;
     background-size: cover !important;
     background-repeat: no-repeat;
     background-position: center !important;
