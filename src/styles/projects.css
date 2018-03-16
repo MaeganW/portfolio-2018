@@ -5,12 +5,16 @@
   .projects_block {
     width: 100%;
     height: 100%; }
+  .projects_visible {
+    width: 100%;
+    height: 100%; }
   .projects_img {
+    display: block;
     width: 100%;
     height: 100%; }
   .projects_mask {
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
     background-size: cover !important;
     background-repeat: no-repeat;
     background-position: center !important;
@@ -20,7 +24,7 @@
     flex-direction: column;
     justify-content: space-around; }
     .projects_mask h3 {
-      color: #fff;
+      color: var(--blue);
       font-size: 2.5rem;
       font-family: var(--text-header);
       text-transform: uppercase;
@@ -35,8 +39,8 @@
       margin-left: auto;
       margin-right: auto;
       background: transparent;
-      color: var(--yellow);
-      border-color: var(--yellow);
+      color: var(--blue);
+      border-color: var(--blue);
       font-family: var(--text-normal);
       font-size: 14px;
       min-height: 27px;
@@ -48,7 +52,7 @@
       padding: 0.8rem 1.8rem;
       text-transform: uppercase; }
       .projects_mask_button:hover, .projects_mask_button:focus {
-        background-color: var(--yellow);
+        background-color: var(--blue);
         color: var(--grey);
         text-decoration: none; }
     .projects_mask_jsClock {
@@ -83,3 +87,6 @@
       background: linear-gradient(0deg, rgba(38, 38, 38, 0.95), rgba(38, 38, 38, 0.95)), url("./img/projects/Trillo.png"); }
     .projects_mask_patatap {
       background: linear-gradient(0deg, rgba(38, 38, 38, 0.95), rgba(38, 38, 38, 0.95)), url("./img/projects/Patatap.png"); }
+  @media screen and (max-width: 1380px) {
+    .projects {
+      grid-template-columns: repeat(3, 1fr); } }

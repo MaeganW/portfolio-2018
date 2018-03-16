@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Dimmer, Button, Header } from 'semantic-ui-react';
+import { Image, Dimmer, Button, Header, Transition, Reveal } from 'semantic-ui-react';
 
 import jsClock from '../../img/projects/JSClock.png';
 import cssVariables from '../../img/projects/CSSVariables.png';
@@ -135,24 +135,76 @@ const projectImgs = [
   }
 ];
 
+
+// export default class Projects extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       active: '',
+//     };
+//   }
+
+//   render() {
+//     const imgBlocks = projectImgs.map((project) => (
+//       <div className="projects_block">
+//         {(this.state.active === project.id) ?
+//         (
+//           <div
+//             className={`projects_mask projects_mask_${project.id}`}
+//             onMouseLeave={() => this.setState({ active: '' })}
+//             href={project.href}
+//             target='_blank'
+//             >
+//             <h3>
+//               {project.title}
+//             </h3>
+//             <p>
+//               {project.content}
+//             </p>
+//             <button className="projects_mask_button">See More</button>
+//           </div>
+//         )
+//         : (
+//           <img
+//             onMouseEnter={() => this.setState({ active: project.id })}
+//             className="projects_img"
+//             src={project.src}
+//           />
+//         )}
+//       </div>
+//     ));
+
+//     return (
+//       <div className="projects">
+//         {imgBlocks}
+//       </div>
+//     );
+//   }
+// }
+
+
 export default class Projects extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: ''
+      active: '',
     };
   }
 
   render() {
-    const imgBlocks = projectImgs.map((project) => (
-      <div className="projects_block">
-        {(this.state.active === project.id) ?
-        (
-          <div
+
+    const imgBlocks = projectImgs.map((project) => {
+      const visible = (this.state.active === project.id);
+      const hidden = !visible;
+
+      return (
+      <Reveal animated='fade' className="projects_block">
+          <Reveal.Content
             className={`projects_mask projects_mask_${project.id}`}
             onMouseLeave={() => this.setState({ active: '' })}
             href={project.href}
             target='_blank'
+            hidden
             >
             <h3>
               {project.title}
@@ -161,17 +213,19 @@ export default class Projects extends Component {
               {project.content}
             </p>
             <button className="projects_mask_button">See More</button>
-          </div>
-        )
-        : (
-          <img
-            onMouseEnter={() => this.setState({ active: project.id })}
-            className="projects_img"
-            src={project.src}
-          />
-        )}
-      </div>
-    ));
+          </Reveal.Content>
+          <Reveal.Content visible>
+            <div className="projects_visible">
+              <img
+                onMouseEnter={() => this.setState({ active: project.id })}
+                className="projects_img"
+                src={project.src}
+              />
+            </div>
+          </Reveal.Content>
+      </Reveal>
+      )
+    });
 
     return (
       <div className="projects">
