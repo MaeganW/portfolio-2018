@@ -198,7 +198,17 @@ export default class Projects extends Component {
       const hidden = !visible;
 
       return (
+        <div>
       <Reveal animated='fade' className="projects_block">
+          <Reveal.Content fluid className="projects_visible" visible>
+            {/* <div className="projects_visible"> */}
+              <Image
+                onMouseEnter={() => this.setState({ active: project.id })}
+                className="projects_img"
+                src={project.src}
+              />
+            {/* </div> */}
+          </Reveal.Content>
           <Reveal.Content
             className={`projects_mask projects_mask_${project.id}`}
             onMouseLeave={() => this.setState({ active: '' })}
@@ -214,16 +224,8 @@ export default class Projects extends Component {
             </p>
             <button className="projects_mask_button">See More</button>
           </Reveal.Content>
-          <Reveal.Content visible>
-            <div className="projects_visible">
-              <img
-                onMouseEnter={() => this.setState({ active: project.id })}
-                className="projects_img"
-                src={project.src}
-              />
-            </div>
-          </Reveal.Content>
       </Reveal>
+      </div>
       )
     });
 
