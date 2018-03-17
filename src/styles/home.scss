@@ -9,5 +9,9 @@ h1 {
 
   &_desktop {
     color: var(--color-grey-light-2);
+
+    &_body {
+      padding-top: 75px;
+    }
   }
 }
