@@ -12,6 +12,20 @@ h1 {
 
     &_body {
       padding-top: 75px;
+      height: 50vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-image: url('./img/elements/sergey-zolkin-192937.jpg');
+      background-attachment: fixed;
+      // background-position: bottom center;
+      background-size: cover;
+
+      p {
+        font-size: 2.2rem;
+      }
     }
   }
 }

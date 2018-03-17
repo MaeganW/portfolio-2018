@@ -45,11 +45,15 @@
     justify-content: space-between;
 
     p {
+      cursor: pointer;
       margin: 0;
       padding: 0;
+      padding-top: 2px;
+      border-bottom: 2px solid transparent;
 
       &:hover {
         color: #fff;
+        border-bottom: 2px solid currentColor;
       }
     }
   }
