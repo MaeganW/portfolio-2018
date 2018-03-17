@@ -6,3 +6,5 @@ h1 {
 
 .home_desktop {
   color: var(--color-grey-light-2); }
+  .home_desktop_body {
+    padding-top: 75px; }

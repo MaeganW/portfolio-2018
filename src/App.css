@@ -50,6 +50,8 @@ h1 {
 
 .home_desktop {
   color: var(--color-grey-light-2); }
+  .home_desktop_body {
+    padding-top: 75px; }
 
 .projects {
   width: 100vw;
@@ -143,3 +145,42 @@ h1 {
   @media screen and (max-width: 1380px) {
     .projects {
       grid-template-columns: repeat(3, 1fr); } }
+
+.nav {
+  background: transparent;
+  width: 100vw;
+  height: 75px;
+  font-size: 1.6rem;
+  box-shadow: var(--shadow-dark);
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .nav_brand {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .nav_brand_img {
+      width: 50px;
+      height: 50px;
+      color: #fff;
+      border: 3px solid #fff;
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .nav_brand_name {
+      color: #fff; }
+      .nav_brand_name span {
+        color: var(--yellow); }
+  .nav_pages {
+    width: 200px;
+    display: flex;
+    justify-content: space-between; }
+    .nav_pages p {
+      margin: 0;
+      padding: 0; }
+      .nav_pages p:hover {
+        color: #fff; }
