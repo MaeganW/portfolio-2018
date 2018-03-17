@@ -197,3 +197,16 @@ h1 {
       .nav_pages p:hover {
         color: #fff;
         border-bottom: 2px solid currentColor; }
+
+.about {
+  height: 50vh;
+  background-color: #fff; }
+  .about_content {
+    padding: 0 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .about_content p {
+      display: block;
+      font-size: 2.2rem; }

@@ -1,8 +1,18 @@
 .about {
-  height: 100vh;
+  height: 50vh;
   background-color: #fff;
 
   &_content {
     padding: 0 40px;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      display: block;
+      font-size: 2.2rem;
+    }
   }
 }
